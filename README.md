@@ -10,7 +10,7 @@ NodeJS: https://nodejs.org/en/download
 
 # Screenshots
 ![cypress-cucumberr-report](https://github.com/alagamai/cypress-api-cucumber-framework/blob/main/cypress/images/cucumber-report.png "cucumber-report")
-![cypress-cloud-runner-report1](https://github.com/alagamai/cypress-api-cucumber-framework/blob/main/cypress/images/Cypress-test-runner-gui1.png "cypress-cloud-runner-report1")
+![cypress-cloud-runner-report1](https://github.com/alagamai/cypress-api-cucumber-framework/blob/main/cypress/images/cypress-test-runner-gui1.png "cypress-cloud-runner-report1")
 ![cypress-cloud-runner-report](https://github.com/alagamai/cypress-api-cucumber-framework/blob/main/cypress/images/cypress-cloud-runner-report.png "cypress-cloud-runner-report")
 ![cypress-cloud-runner-view-report](https://github.com/alagamai/cypress-api-cucumber-framework/blob/main/cypress/images/cloud-runner-view-output.png "cypress-cloud-runner-view-report")
 
