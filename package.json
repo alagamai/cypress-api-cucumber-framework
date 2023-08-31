@@ -1,0 +1,37 @@
+{
+	"name": "cypress-api-automation-framework",
+	"version": "1.0.0",
+	"description": "Rest API testing using Cypress framework",
+	"main": "cypress.config.js",
+	"scripts": {
+		"cy:open": "./node_modules/.bin/cypress open",
+		"cy:test:headed": "npx cypress run --browser 'chrome' --headed --record --key 66f4d6d0-2b3c-49e1-aec1-6bad59590a3c  && sudo node cucumber-html-report.js",
+		"cy:test": "npx cypress run --record --key 66f4d6d0-2b3c-49e1-aec1-6bad59590a3c  && sudo node cucumber-html-report.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"cypress-cucumber-preprocessor": {
+		"json": {
+			"enabled": true,
+			"output": "cypress/cucumber-json/cucumber-report.json"
+		},
+		"html": {
+			"enabled": true
+		},
+		"messages": {
+			"enabled": true
+		}
+	},
+	"dependencies": {
+		"@badeball/cypress-cucumber-preprocessor": "^18.0.4",
+		"@cypress/browserify-preprocessor": "^3.0.2",
+		"@faker-js/faker": "^7.6.0",
+		"cypress": "^12.17.4",
+		"cypress-localstorage-commands": "^2.2.4",
+		"multiple-cucumber-html-reporter": "^3.4.0"
+	},
+	"devDependencies": {
+		"cypress-mongo-seeder": "^1.0.8"
+	}
+}

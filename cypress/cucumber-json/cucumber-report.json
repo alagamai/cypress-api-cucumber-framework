@@ -1,0 +1,328 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "testing-get-request-to-zippopotam-api;verify-get-request-to-a-postal-code",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify GET Request to a Postal Code",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have a valid API endpoint for the postal code \"90210\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I make a GET request to the API endpoint",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 816000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "property",
+                      "value"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "latitude",
+                      "34.0901"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "longitude",
+                      "-118.4065"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "state",
+                      "California"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "place name",
+                      "Beverly Hills"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "state abbreviation",
+                      "CA"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the response should have the following properties:",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"latitude\": \"34.0901\",\n  \"longitude\": \"-118.4065\",\n  \"state\": \"California\",\n  \"place name\": \"Beverly Hills\",\n  \"state abbreviation\": \"CA\"\n}",
+                "line": 17
+              }
+            ],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the response should match the expected places:",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "testing-get-request-to-zippopotam-api;retrieve-information-for-a-city-in-a-state",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Retrieve information for a city in a state",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "I make a GET request to \"/us/ma/belmont\" with failOnStatusCode set to \"true\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 329000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I receive a response",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Field Name",
+                      "Expected Value"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "place name",
+                      "Belmont"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 32,
+            "name": "the response should contain the following details:",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "testing-get-request-to-zippopotam-api;retrieve-information-for-an-invalid-city-in-a-state",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Retrieve information for an invalid city in a state",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "I make a GET request to \"/invalid/ma/belmont\" with failOnStatusCode set to \"false\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 305000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "I receive a response",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "the response status code should be 404",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "testing-get-request-to-zippopotam-api;retrieve-information-for-a-city-in-a-state-and-compare-with-mongodb-data",
+        "keyword": "Scenario",
+        "line": 43,
+        "name": "Retrieve information for a city in a state and compare with MongoDB data",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 44,
+            "name": "I generate JSON data and seed the MongoDB database",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7842000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "I make a GET request to \"/us/ma/belmont\" with failOnStatusCode set to \"true\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 626000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 46,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "the response should match the MongoDB data for the city",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1738000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "testing-get-request-to-zippopotam-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Testing GET Request to Zippopotam API",
+    "tags": [],
+    "uri": "cypress/e2e/step-defn/api-test.feature"
+  }
+]
