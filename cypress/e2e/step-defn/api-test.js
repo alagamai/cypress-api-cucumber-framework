@@ -11,7 +11,7 @@ Given(
 
 When('I make a GET request to the API endpoint', () => {
 	cy.get('@apiEndpoint').then(apiEndpoint => {
-		cy.request({
+		cy.api({
 			method: 'GET',
 			url: apiEndpoint,
 			failOnStatusCode: true,
@@ -55,7 +55,7 @@ Given(
 	(url, failOnStatusCode) => {
 		const failStatus = failOnStatusCode === 'false' ? false : true;
 		// Make a GET request using Cypress
-		cy.request({
+		cy.api({
 			method: 'GET',
 			url: url,
 			failOnStatusCode: failStatus,
@@ -85,7 +85,7 @@ Given('I generate JSON data and seed the MongoDB database', () => {
 
 When('I make a GET request to {string}', url => {
 	// Make a GET request using Cypress
-	cy.request({
+	cy.api({
 		method: 'GET',
 		url: url,
 		failOnStatusCode: true,
