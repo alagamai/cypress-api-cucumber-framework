@@ -8,6 +8,9 @@ VSCode: https://code.visualstudio.com/download </br>
 NPM: https://www.npmjs.com/get-npm </br>
 NodeJS: https://nodejs.org/en/download
 
+# Special plugin to get api debugs
+Install cypress-plugin-api plugin to get debug logs of apis (header, test data, response body, etc)
+
 # Screenshots
 ![cypress-cucumberr-report](https://github.com/alagamai/cypress-api-cucumber-framework/blob/main/cypress/images/cucumber-report.png "cucumber-report")
 ![cypress-cloud-runner-report1](https://github.com/alagamai/cypress-api-cucumber-framework/blob/main/cypress/images/cypress-test-runner-gui1.png "cypress-cloud-runner-report1")
